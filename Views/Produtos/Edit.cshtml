@@ -1,0 +1,36 @@
+@model ControleEstoqueRoupas.Models.Produto
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Editar Produto";
+}
+
+<h2>Editar Produto</h2>
+
+<form asp-action="Edit" enctype="multipart/form-data" method="post">
+    <input type="hidden" name="Id" value="@Model.Id" />
+    <div class="form-group">
+        <label for="Nome">Nome</label>
+        <input type="text" class="form-control" id="Nome" name="Nome" value="@Model.Nome" />
+    </div>
+    <div class="form-group">
+        <label for="CodigoCor">Cor</label>
+        <input type="text" class="form-control" id="CodigoCor" name="CodigoCor" value="@Model.CodigoCor" />
+    </div>
+    <div class="form-group">
+        <label for="Quantidade">Quantidade</label>
+        <input type="number" class="form-control" id="Quantidade" name="Quantidade" value="@Model.Quantidade" />
+    </div>
+    <div class="form-group">
+        <label for="Tamanho">Tamanho</label>
+        <input type="text" class="form-control" id="Tamanho" name="Tamanho" value="@Model.Tamanho" />
+    </div>
+    <div class="form-group">
+        <label for="Imagem">Imagem</label>
+        <input type="file" name="Imagem" class="form-control" accept="image/*" />
+        @if (!string.IsNullOrEmpty(Model.CaminhoImagem)) {
+            <img src="@Model.CaminhoImagem" alt="Imagem do Produto" style="max-width:200px; max-height:200px; margin-top:10px;" />
+        }
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+</form>

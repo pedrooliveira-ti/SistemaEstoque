@@ -148,3 +148,5 @@ C:\Users\phenr\OneDrive\Área de Trabalho\ControleEstoqueRoupas\obj\Debug\net9.0
 C:\Users\phenr\OneDrive\Área de Trabalho\ControleEstoqueRoupas\obj\Debug\net9.0\ref\ControleEstoqueRoupas.dll
 C:\Users\phenr\OneDrive\Área de Trabalho\ControleEstoqueRoupas\obj\Debug\net9.0\ControleEstoqueRoupas.RazorAssemblyInfo.cache
 C:\Users\phenr\OneDrive\Área de Trabalho\ControleEstoqueRoupas\obj\Debug\net9.0\ControleEstoqueRoupas.RazorAssemblyInfo.cs
+C:\Users\phenr\OneDrive\Área de Trabalho\ControleEstoqueRoupas\obj\Debug\net9.0\ControleEstoqueRoupas.sourcelink.json
+C:\Users\phenr\OneDrive\Área de Trabalho\ControleEstoqueRoupas\bin\Debug\net9.0\ControleEstoqueRoupas.staticwebassets.runtime.json

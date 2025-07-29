@@ -10,5 +10,6 @@ namespace ControleEstoqueRoupas.Models
         public int Quantidade { get; set; }
         public string Tamanho { get; set; } = string.Empty;
         public string CaminhoFoto { get; set; } = string.Empty;
+        public string? CaminhoImagem { get; set; }
     }
 }

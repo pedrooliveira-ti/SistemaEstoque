@@ -1,10 +1,16 @@
-@model ControleEstoqueRoupas.Models.Produto
 
+@model ControleEstoqueRoupas.Models.Produto
 @{
+    Layout = "~/Views/Shared/_Layout.cshtml";
     ViewData["Title"] = "Cadastrar Produto";
 }
 
 <h2>Cadastrar Produto</h2>
+
+<div class="mb-3">
+    <strong>Exemplo de imagem salva no sistema:</strong><br />
+    <img src="/imagens/exemplo-teste.jpg" alt="Exemplo de Imagem" style="max-width:200px; max-height:200px; border:1px solid #ccc; margin-bottom:10px;" />
+</div>
 
 <form asp-action="Create" enctype="multipart/form-data" method="post">
     <div class="form-group">
@@ -24,11 +30,9 @@
         <input type="text" class="form-control" id="Tamanho" name="Tamanho" value="@Model.Tamanho" />
     </div>
     <div class="form-group">
-        <label for="CaminhoFoto">Foto</label><br />
-        <img id="preview" src="@Model.CaminhoFoto" alt="Foto do Produto" style="max-width:200px; max-height:200px;" />
-        <br />
-        <input type="file" id="CaminhoFoto" name="CaminhoFoto" accept="image/*" onchange="previewFoto(event)" style="display:none;" />
-        <button type="button" class="btn btn-secondary" onclick="document.getElementById('CaminhoFoto').click();">Selecionar Foto</button>
+        <label for="Imagem">Imagem</label>
+        <input type="file" name="Imagem" class="form-control" accept="image/*" onchange="previewFoto(event)" />
+        <img id="preview" src="#" alt="Preview da Imagem" style="display:none; max-width:200px; max-height:200px; margin-top:10px;" />
     </div>
     <br />
     <button type="submit" class="btn btn-primary">Salvar Produto</button>
@@ -40,7 +44,10 @@ function previewFoto(event) {
     reader.onload = function(){
         var output = document.getElementById('preview');
         output.src = reader.result;
+        output.style.display = 'block';
     };
-    reader.readAsDataURL(event.target.files[0]);
+    if(event.target.files[0]) {
+        reader.readAsDataURL(event.target.files[0]);
+    }
 }
 </script>
