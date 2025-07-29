@@ -1,49 +1,127 @@
 
 @model ControleEstoqueRoupas.Models.Produto
+@{
+    ViewData["Title"] = "Cadastrar Produto";
+}
 
-<h2>Cadastrar Produto</h2>
-
-<div class="mb-3">
-    <strong>Exemplo de imagem salva no sistema:</strong><br />
-    <img src="/imagens/imagem2.jpg" alt="Exemplo de Imagem" style="max-width:200px; max-height:200px; border:1px solid #ccc; margin-bottom:10px;" />
+<div class="row">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title mb-0">
+                    <i class="fas fa-plus-circle"></i> Cadastrar Novo Produto
+                </h3>
+            </div>
+            <div class="card-body">
+                <form asp-action="Create" enctype="multipart/form-data" method="post">
+                    <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label asp-for="Nome" class="form-label">Nome do Produto</label>
+                                <input asp-for="Nome" class="form-control" placeholder="Ex: Camiseta Polo" />
+                                <span asp-validation-for="Nome" class="text-danger"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label asp-for="CodigoCor" class="form-label">Cor</label>
+                                <input asp-for="CodigoCor" class="form-control" placeholder="Ex: Azul, Vermelho" />
+                                <span asp-validation-for="CodigoCor" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label asp-for="Quantidade" class="form-label">Quantidade</label>
+                                <input asp-for="Quantidade" class="form-control" type="number" min="0" placeholder="0" />
+                                <span asp-validation-for="Quantidade" class="text-danger"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label asp-for="Tamanho" class="form-label">Tamanho</label>
+                                <select asp-for="Tamanho" class="form-control">
+                                    <option value="">Selecione o tamanho</option>
+                                    <option value="PP">PP</option>
+                                    <option value="P">P</option>
+                                    <option value="M">M</option>
+                                    <option value="G">G</option>
+                                    <option value="GG">GG</option>
+                                    <option value="XG">XG</option>
+                                </select>
+                                <span asp-validation-for="Tamanho" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group mb-4">
+                        <label for="Imagem" class="form-label">Imagem do Produto</label>
+                        <input type="file" name="Imagem" class="form-control" accept="image/*" onchange="previewFoto(event)" />
+                        <div class="form-text">Formatos aceitos: JPG, PNG, GIF (máx. 5MB)</div>
+                        
+                        <div id="preview-container" style="display:none; margin-top:15px;">
+                            <img id="preview" src="#" alt="Preview da Imagem" class="img-thumbnail" style="max-width:200px; max-height:200px;" />
+                        </div>
+                    </div>
+                    
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <a asp-action="Index" class="btn btn-secondary me-md-2">
+                            <i class="fas fa-arrow-left"></i> Cancelar
+                        </a>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-save"></i> Salvar Produto
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title mb-0">Dicas</h5>
+            </div>
+            <div class="card-body">
+                <ul class="list-unstyled">
+                    <li class="mb-2">
+                        <i class="fas fa-check text-success"></i>
+                        Use nomes descritivos para os produtos
+                    </li>
+                    <li class="mb-2">
+                        <i class="fas fa-check text-success"></i>
+                        Mantenha o estoque sempre atualizado
+                    </li>
+                    <li class="mb-2">
+                        <i class="fas fa-check text-success"></i>
+                        Adicione imagens de boa qualidade
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
-
-<form asp-action="Create" enctype="multipart/form-data" method="post">
-    <div class="form-group">
-        <label for="Nome">Nome</label>
-        <input type="text" class="form-control" id="Nome" name="Nome" />
-    </div>
-    <div class="form-group">
-        <label for="CodigoCor">Cor</label>
-        <input type="text" class="form-control" id="CodigoCor" name="CodigoCor" />
-    </div>
-    <div class="form-group">
-        <label for="Quantidade">Quantidade</label>
-        <input type="number" class="form-control" id="Quantidade" name="Quantidade" />
-    </div>
-    <div class="form-group">
-        <label for="Tamanho">Tamanho</label>
-        <input type="text" class="form-control" id="Tamanho" name="Tamanho" />
-    </div>
-    <div class="form-group">
-        <label for="Imagem">Imagem</label>
-        <input type="file" name="Imagem" class="form-control" accept="image/*" onchange="previewFoto(event)" />
-        <img id="preview" src="#" alt="Preview da Imagem" style="display:none; max-width:200px; max-height:200px; margin-top:10px;" />
-    </div>
-    <br />
-    <button type="submit" class="btn btn-primary">Salvar Produto</button>
-</form>
 
 <script>
 function previewFoto(event) {
     var reader = new FileReader();
     reader.onload = function(){
         var output = document.getElementById('preview');
+        var container = document.getElementById('preview-container');
         output.src = reader.result;
-        output.style.display = 'block';
+        container.style.display = 'block';
     };
     if(event.target.files[0]) {
         reader.readAsDataURL(event.target.files[0]);
+    } else {
+        document.getElementById('preview-container').style.display = 'none';
     }
 }
 </script>
+

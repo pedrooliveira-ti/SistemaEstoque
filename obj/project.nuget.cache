@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "/0J/m2xQXdk=",
+  "dgSpecHash": "6pATGDVCDwQ=",
   "success": true,
   "projectFilePath": "C:\\Users\\phenr\\OneDrive\\Área de Trabalho\\ControleEstoqueRoupas\\ControleEstoqueRoupas.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\phenr\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\phenr\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\phenr\\.nuget\\packages\\microsoft.data.sqlite.core\\6.0.0\\microsoft.data.sqlite.core.6.0.0.nupkg.sha512",
     "C:\\Users\\phenr\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.0\\microsoft.entityframeworkcore.6.0.0.nupkg.sha512",

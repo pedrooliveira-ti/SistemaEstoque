@@ -1,5 +1,3 @@
-using System;
-
 namespace ControleEstoqueRoupas.Models
 {
     public class Produto
@@ -13,3 +11,5 @@ namespace ControleEstoqueRoupas.Models
         public string? CaminhoImagem { get; set; }
     }
 }
+
+

@@ -1,0 +1,84 @@
+@model ControleEstoqueRoupas.ViewModels.RegistroViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registro - Sistema de Estoque</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-primary">
+    <div class="container">
+        <div class="card o-hidden border-0 shadow-lg my-5">
+            <div class="card-body p-0">
+                <div class="row">
+                    <div class="col-lg-5 d-none d-lg-block bg-register-image" style="background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);"></div>
+                    <div class="col-lg-7">
+                        <div class="p-5">
+                            <div class="text-center">
+                                <h1 class="h4 text-gray-900 mb-4">Criar Conta</h1>
+                            </div>
+                            <form asp-action="Registro" method="post" class="user">
+                                <div class="form-group row mb-3">
+                                    <div class="col-sm-12">
+                                        <input asp-for="Nome" class="form-control form-control-user" placeholder="Nome Completo">
+                                        <span asp-validation-for="Nome" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <input asp-for="Email" class="form-control form-control-user" placeholder="Email">
+                                    <span asp-validation-for="Email" class="text-danger"></span>
+                                </div>
+                                <div class="form-group row mb-3">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <input asp-for="Senha" type="password" class="form-control form-control-user" placeholder="Senha">
+                                        <span asp-validation-for="Senha" class="text-danger"></span>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input asp-for="ConfirmarSenha" type="password" class="form-control form-control-user" placeholder="Confirmar Senha">
+                                        <span asp-validation-for="ConfirmarSenha" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group mb-3">
+                                    <div class="custom-control custom-checkbox">
+                                        <input asp-for="CriarLoja" type="checkbox" class="custom-control-input" id="criarLoja">
+                                        <label for="criarLoja" class="custom-control-label">Criar nova loja</label>
+                                    </div>
+                                </div>
+                                
+                                <div id="dadosLoja" style="display: none;">
+                                    <div class="form-group mb-3">
+                                        <input asp-for="NomeLoja" class="form-control form-control-user" placeholder="Nome da Loja">
+                                        <span asp-validation-for="NomeLoja" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <input asp-for="CNPJ" class="form-control form-control-user" placeholder="CNPJ (opcional)">
+                                    </div>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary btn-user btn-block w-100">
+                                    <i class="fas fa-user-plus"></i> Registrar Conta
+                                </button>
+                            </form>
+                            <hr>
+                            <div class="text-center">
+                                <a class="small" href="@Url.Action("Login")">Já tem uma conta? Faça login!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('criarLoja').addEventListener('change', function() {
+            document.getElementById('dadosLoja').style.display = this.checked ? 'block' : 'none';
+        });
+    </script>
+</body>
+</html>

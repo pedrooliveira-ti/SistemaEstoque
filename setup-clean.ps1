@@ -1,3 +1,5 @@
+# Para utilizar o Setup, digite: .\setup-clean.ps1
+
 # Script de automação para ControleEstoqueRoupas
 Write-Host "=== Iniciando setup do ControleEstoqueRoupas ===" -ForegroundColor Green
 

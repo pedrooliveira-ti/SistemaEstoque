@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ControleEstoqueRoupas")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b97d106aaee1b573e6fe94ee6d6acf917ad5bb5a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4e8732c9f8de68b0957a1bfd0e3f0636b307a29d")]
 [assembly: System.Reflection.AssemblyProductAttribute("ControleEstoqueRoupas")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ControleEstoqueRoupas")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
