@@ -1,0 +1,46 @@
+@model ControleEstoqueRoupas.Models.Produto
+
+@{
+    ViewData["Title"] = "Cadastrar Produto";
+}
+
+<h2>Cadastrar Produto</h2>
+
+<form asp-action="Create" enctype="multipart/form-data" method="post">
+    <div class="form-group">
+        <label for="Nome">Nome</label>
+        <input type="text" class="form-control" id="Nome" name="Nome" value="@Model.Nome" />
+    </div>
+    <div class="form-group">
+        <label for="CodigoCor">Cor</label>
+        <input type="text" class="form-control" id="CodigoCor" name="CodigoCor" value="@Model.CodigoCor" />
+    </div>
+    <div class="form-group">
+        <label for="Quantidade">Quantidade</label>
+        <input type="number" class="form-control" id="Quantidade" name="Quantidade" value="@Model.Quantidade" />
+    </div>
+    <div class="form-group">
+        <label for="Tamanho">Tamanho</label>
+        <input type="text" class="form-control" id="Tamanho" name="Tamanho" value="@Model.Tamanho" />
+    </div>
+    <div class="form-group">
+        <label for="CaminhoFoto">Foto</label><br />
+        <img id="preview" src="@Model.CaminhoFoto" alt="Foto do Produto" style="max-width:200px; max-height:200px;" />
+        <br />
+        <input type="file" id="CaminhoFoto" name="CaminhoFoto" accept="image/*" onchange="previewFoto(event)" style="display:none;" />
+        <button type="button" class="btn btn-secondary" onclick="document.getElementById('CaminhoFoto').click();">Selecionar Foto</button>
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Salvar Produto</button>
+</form>
+
+<script>
+function previewFoto(event) {
+    var reader = new FileReader();
+    reader.onload = function(){
+        var output = document.getElementById('preview');
+        output.src = reader.result;
+    };
+    reader.readAsDataURL(event.target.files[0]);
+}
+</script>

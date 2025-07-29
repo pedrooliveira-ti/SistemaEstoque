@@ -1,0 +1,70 @@
+@model IEnumerable<ControleEstoqueRoupas.Models.Produto>
+
+@{
+    ViewData["Title"] = "Produtos";
+}
+
+<h2>Produtos</h2>
+
+<div class="form-group">
+    <input type="text" id="busca" class="form-control" placeholder="Buscar produto..." onkeyup="filtrarProdutos()" />
+</div>
+<br />
+<table class="table table-bordered" id="produtosTable">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Cor</th>
+            <th>Quantidade</th>
+            <th>Tamanho</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var produto in Model)
+        {
+            <tr onclick="mostrarDetalhes(@produto.Id)">
+                <td>@produto.Nome</td>
+                <td>@produto.CodigoCor</td>
+                <td>@produto.Quantidade</td>
+                <td>@produto.Tamanho</td>
+                <td>
+                    <form asp-action="Vender" asp-route-id="@produto.Id" method="post" style="display:inline;">
+                        <button type="submit" class="btn btn-warning">Vender / Baixar Estoque</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div id="detalhesProduto" style="display:none; margin-top:20px;">
+    <h4>Detalhes do Produto</h4>
+    <img id="detalheFoto" src="" alt="Foto do Produto" style="max-width:200px; max-height:200px;" />
+    <p><strong>Nome:</strong> <span id="detalheNome"></span></p>
+    <p><strong>Cor:</strong> <span id="detalheCor"></span></p>
+    <p><strong>Tamanho:</strong> <span id="detalheTamanho"></span></p>
+</div>
+
+<script>
+function filtrarProdutos() {
+    var input = document.getElementById('busca').value.toLowerCase();
+    var rows = document.querySelectorAll('#produtosTable tbody tr');
+    rows.forEach(function(row) {
+        var nome = row.cells[0].innerText.toLowerCase();
+        row.style.display = nome.includes(input) ? '' : 'none';
+    });
+}
+
+function mostrarDetalhes(id) {
+    var produtos = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(Model));
+    var produto = produtos.find(p => p.Id === id);
+    if (produto) {
+        document.getElementById('detalhesProduto').style.display = 'block';
+        document.getElementById('detalheFoto').src = produto.CaminhoFoto || '';
+        document.getElementById('detalheNome').innerText = produto.Nome;
+        document.getElementById('detalheCor').innerText = produto.CodigoCor;
+        document.getElementById('detalheTamanho').innerText = produto.Tamanho;
+    }
+}
+</script>
