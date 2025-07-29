@@ -1,33 +1,29 @@
 
 @model ControleEstoqueRoupas.Models.Produto
-@{
-    Layout = "~/Views/Shared/_Layout.cshtml";
-    ViewData["Title"] = "Cadastrar Produto";
-}
 
 <h2>Cadastrar Produto</h2>
 
 <div class="mb-3">
     <strong>Exemplo de imagem salva no sistema:</strong><br />
-    <img src="/imagens/exemplo-teste.jpg" alt="Exemplo de Imagem" style="max-width:200px; max-height:200px; border:1px solid #ccc; margin-bottom:10px;" />
+    <img src="/imagens/imagem2.jpg" alt="Exemplo de Imagem" style="max-width:200px; max-height:200px; border:1px solid #ccc; margin-bottom:10px;" />
 </div>
 
 <form asp-action="Create" enctype="multipart/form-data" method="post">
     <div class="form-group">
         <label for="Nome">Nome</label>
-        <input type="text" class="form-control" id="Nome" name="Nome" value="@Model.Nome" />
+        <input type="text" class="form-control" id="Nome" name="Nome" />
     </div>
     <div class="form-group">
         <label for="CodigoCor">Cor</label>
-        <input type="text" class="form-control" id="CodigoCor" name="CodigoCor" value="@Model.CodigoCor" />
+        <input type="text" class="form-control" id="CodigoCor" name="CodigoCor" />
     </div>
     <div class="form-group">
         <label for="Quantidade">Quantidade</label>
-        <input type="number" class="form-control" id="Quantidade" name="Quantidade" value="@Model.Quantidade" />
+        <input type="number" class="form-control" id="Quantidade" name="Quantidade" />
     </div>
     <div class="form-group">
         <label for="Tamanho">Tamanho</label>
-        <input type="text" class="form-control" id="Tamanho" name="Tamanho" value="@Model.Tamanho" />
+        <input type="text" class="form-control" id="Tamanho" name="Tamanho" />
     </div>
     <div class="form-group">
         <label for="Imagem">Imagem</label>
