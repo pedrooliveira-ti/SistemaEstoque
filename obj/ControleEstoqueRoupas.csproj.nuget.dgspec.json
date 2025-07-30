@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\phenr\\OneDrive\\Área de Trabalho\\ControleEstoqueRoupas\\ControleEstoqueRoupas.csproj": {}
+    "C:\\Users\\phenr\\OneDrive\\Área de Trabalho\\ControleEstoqueRoupas\\SistemaEstoque\\ControleEstoqueRoupas.csproj": {}
   },
   "projects": {
-    "C:\\Users\\phenr\\OneDrive\\Área de Trabalho\\ControleEstoqueRoupas\\ControleEstoqueRoupas.csproj": {
+    "C:\\Users\\phenr\\OneDrive\\Área de Trabalho\\ControleEstoqueRoupas\\SistemaEstoque\\ControleEstoqueRoupas.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\phenr\\OneDrive\\Área de Trabalho\\ControleEstoqueRoupas\\ControleEstoqueRoupas.csproj",
+        "projectUniqueName": "C:\\Users\\phenr\\OneDrive\\Área de Trabalho\\ControleEstoqueRoupas\\SistemaEstoque\\ControleEstoqueRoupas.csproj",
         "projectName": "ControleEstoqueRoupas",
-        "projectPath": "C:\\Users\\phenr\\OneDrive\\Área de Trabalho\\ControleEstoqueRoupas\\ControleEstoqueRoupas.csproj",
+        "projectPath": "C:\\Users\\phenr\\OneDrive\\Área de Trabalho\\ControleEstoqueRoupas\\SistemaEstoque\\ControleEstoqueRoupas.csproj",
         "packagesPath": "C:\\Users\\phenr\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\phenr\\OneDrive\\Área de Trabalho\\ControleEstoqueRoupas\\obj\\",
+        "outputPath": "C:\\Users\\phenr\\OneDrive\\Área de Trabalho\\ControleEstoqueRoupas\\SistemaEstoque\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\phenr\\AppData\\Roaming\\NuGet\\NuGet.Config"
