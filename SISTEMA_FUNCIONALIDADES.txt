@@ -1,0 +1,196 @@
+===============================================================================
+                    SISTEMA DE CONTROLE DE ESTOQUE PRO
+                           Versão 2.0 - .NET 8
+===============================================================================
+
+🏢 DESCRIÇÃO GERAL
+Sistema completo de controle de estoque para lojas de roupas, desenvolvido em 
+ASP.NET Core 8 com Entity Framework Core, SQLite e interface responsiva.
+
+===============================================================================
+📋 FUNCIONALIDADES PRINCIPAIS
+===============================================================================
+
+🔐 AUTENTICAÇÃO E SEGURANÇA
+✅ Sistema de login/logout seguro
+✅ Registro de usuários com validação
+✅ Criptografia de senhas com BCrypt
+✅ Sessões seguras com timeout automático
+✅ Controle de acesso por roles
+✅ Validação de dados robusta
+
+👤 GESTÃO DE USUÁRIOS
+✅ Cadastro de clientes e lojistas
+✅ Perfis diferenciados (Cliente/Lojista)
+✅ Dados da loja (Nome, CNPJ)
+✅ Auditoria de ações por usuário
+
+📦 GESTÃO DE PRODUTOS
+✅ Cadastro completo de produtos
+✅ Upload e otimização automática de imagens
+✅ Campos: Nome, Cor, Tamanho, Preço, Quantidade
+✅ Código de barras opcional
+✅ Descrição detalhada
+✅ Estoque mínimo configurável
+✅ Soft delete (exclusão lógica)
+
+🔍 BUSCA E FILTROS AVANÇADOS
+✅ Busca por nome, cor, tamanho, código de barras
+✅ Filtros por preço (mín/máx)
+✅ Filtro por disponibilidade em estoque
+✅ Ordenação por nome, preço, quantidade, data
+✅ Paginação otimizada (12 itens por página)
+
+📊 DASHBOARD EXECUTIVO
+✅ Visão geral do negócio
+✅ Total de produtos cadastrados
+✅ Produtos sem estoque
+✅ Produtos com estoque baixo
+✅ Valor total do estoque
+✅ Vendas do dia/mês
+✅ Faturamento mensal
+✅ Lista de produtos críticos
+✅ Histórico de vendas recentes
+
+💰 CONTROLE DE VENDAS
+✅ Registro de vendas com um clique
+✅ Atualização automática do estoque
+✅ Histórico completo de movimentações
+✅ Cálculo automático de valores
+
+📈 RELATÓRIOS E AUDITORIA
+✅ Histórico completo de movimentações
+✅ Rastreamento por usuário
+✅ Tipos: Entrada, Saída, Venda, Ajuste
+✅ Valores unitários e totais
+✅ Observações personalizadas
+✅ Timestamps precisos
+
+🖼️ GESTÃO DE IMAGENS
+✅ Upload seguro de imagens
+✅ Validação de formato (JPG, PNG, WEBP)
+✅ Redimensionamento automático (800x600)
+✅ Compressão otimizada
+✅ Conversão para WEBP
+✅ Limite de 5MB por arquivo
+✅ Exclusão automática de imagens órfãs
+
+📱 INTERFACE RESPONSIVA
+✅ Design moderno com Bootstrap 5
+✅ Ícones profissionais Font Awesome
+✅ Totalmente responsivo (mobile-first)
+✅ Feedback visual para todas as ações
+✅ Confirmações de segurança
+✅ Alertas informativos
+
+⚡ PERFORMANCE E ESCALABILIDADE
+✅ .NET 8 (última versão LTS)
+✅ Entity Framework Core 8
+✅ Consultas otimizadas com LINQ
+✅ Async/await em todas operações
+✅ Índices de banco otimizados
+✅ Cache de sessão em memória
+✅ Lazy loading configurado
+
+🔧 RECURSOS TÉCNICOS
+✅ Banco SQLite embarcado (zero configuração)
+✅ Migrations automáticas
+✅ Logging estruturado
+✅ Health checks
+✅ Tratamento de exceções
+✅ Validação client/server-side
+✅ Configuração por ambiente
+
+🐳 DEPLOY E MANUTENÇÃO
+✅ Docker ready
+✅ Multiplataforma (Windows/Linux/Mac)
+✅ Configuração via environment variables
+✅ Script de automação PowerShell
+✅ Backup automático do banco
+✅ Zero downtime deployment
+
+===============================================================================
+💰 VALORES COMERCIAIS SUGERIDOS
+===============================================================================
+
+📦 LICENÇA BÁSICA - R$ 2.500,00
+• Sistema completo para 1 loja
+• Até 5.000 produtos
+• 1 usuário administrador
+• Suporte por email (30 dias)
+• Atualizações por 6 meses
+
+🏢 LICENÇA PROFISSIONAL - R$ 4.500,00
+• Sistema para até 3 lojas
+• Produtos ilimitados
+• Até 5 usuários
+• Dashboard avançado
+• Relatórios completos
+• Suporte prioritário (90 dias)
+• Atualizações por 1 ano
+• Treinamento online (2h)
+
+🏭 LICENÇA ENTERPRISE - R$ 8.500,00
+• Lojas ilimitadas
+• Usuários ilimitados
+• Customizações incluídas
+• Integração com APIs externas
+• Suporte 24/7 (1 ano)
+• Atualizações vitalícias
+• Treinamento presencial (8h)
+• Consultoria de implantação
+
+💻 SERVIÇOS ADICIONAIS
+• Instalação e configuração: R$ 500,00
+• Treinamento adicional (por hora): R$ 150,00
+• Customizações (por hora): R$ 200,00
+• Migração de dados: R$ 800,00
+• Suporte mensal: R$ 300,00
+• Backup em nuvem: R$ 100,00/mês
+
+🎯 PACOTES PROMOCIONAIS
+• Startup (Básica + Instalação): R$ 2.800,00
+• Crescimento (Profissional + Treinamento): R$ 4.800,00
+• Completo (Enterprise + Todos serviços): R$ 12.000,00
+
+===============================================================================
+🎯 DIFERENCIAIS COMPETITIVOS
+===============================================================================
+
+✨ TECNOLOGIA MODERNA
+• .NET 8 (mais recente e estável)
+• Interface moderna e intuitiva
+• Performance superior
+• Segurança enterprise
+
+✨ FACILIDADE DE USO
+• Instalação em 5 minutos
+• Interface intuitiva
+• Treinamento mínimo necessário
+• Suporte em português
+
+✨ CUSTO-BENEFÍCIO
+• Sem mensalidades
+• Banco local (sem dependências)
+• Baixo custo de manutenção
+• ROI rápido
+
+✨ FLEXIBILIDADE
+• Customizável
+• Escalável
+• Multiplataforma
+• Código fonte disponível (Enterprise)
+
+===============================================================================
+📞 CONTATO COMERCIAL
+===============================================================================
+
+📧 Email: vendas@estoquepro.com.br
+📱 WhatsApp: (11) 99999-9999
+🌐 Site: www.estoquepro.com.br
+📍 Endereço: São Paulo - SP
+
+💡 Demonstração gratuita disponível!
+🎁 Desconto de 20% para primeiros clientes!
+
+===============================================================================
